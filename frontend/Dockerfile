@@ -1,7 +1,7 @@
 FROM node
 COPY spa /root/spa
 WORKDIR /root/spa
-RUN echo 'VUE_APP_API_ENDPOINT="http://backend:4001/api"' >> .env.production.local
+RUN echo 'VUE_APP_API_ENDPOINT="http://localhost:4001/api"' >> .env.production.local
 RUN npm install
 RUN npm run build
 
